@@ -1,0 +1,15 @@
+---
+layout: astra 
+sidebar: sidebar 
+permalink: index.html 
+summary: 'Gli strumenti ONTAP per VMware vSphere consentono di configurare, gestire e proteggere i datastore virtuali nell"ambiente vCenter Server.' 
+---
+= Strumenti ONTAP per la documentazione VMware vSphere
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
