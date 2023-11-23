@@ -2170,4 +2170,10 @@ Per informazioni dettagliate, consultare la sezione seguente.</block>
   <block id="c482036287311326fe268e793e8592b0" category="inline-image-macro">nuova mappatura delle risorse</block>
   <block id="3f8ca314615f7ceccc4e80b9ecdd18e7" category="list-text">Fare clic su <block ref="b0cd4e998161741b4ab585ccd5066812" category="inline-image-macro-rx" type="image"></block> per creare una nuova mappatura delle risorse.</block>
   <block id="bdc5a4ba1115f3f724e1f81e7f41eeef" category="list-text">Fare clic con il pulsante destro del mouse sull'archivio dati e selezionare *NetApp ONTAP tools* &gt; *Ridimensiona archivio dati non vVol*.</block>
+  <block id="2d7ee85ca6eba61e2ebc56fcd9749a22" category="section-title">Configurazioni MetroCluster e SRA</block>
+  <block id="700f785cc3b0c94782ea099d30974628" category="paragraph">L'adattatore per la replica dello storage (SRA) supporta ambienti che utilizzano configurazioni MetroCluster (MCC) con protocollo NFS, iSCSI e FCP.</block>
+  <block id="b0cf503432f798961e23d246f3541857" category="paragraph">Come prerequisito per la configurazione SRA MCC, tutti i nomi delle Storage Virtual Machine (SVM) devono essere univoci sui cluster MCC. Se i nomi non sono univoci, causano conflitti e i flussi di lavoro SRA non riescono.</block>
+  <block id="a3a5ab624299236efd1aa00751d3e9d9" category="paragraph">Azioni necessarie:</block>
+  <block id="9a5bef2e6baedf8812a9649b615baf1a" category="list-text">Dopo aver eseguito uno switchover MCC o uno switchback, verificare che il comando _snapmirror list-destinations_ sul cluster di origine mostri l'output corretto con il nuovo nome SVM (&lt;vserver_name&gt;-mc). L'esecuzione del comando potrebbe richiedere fino a 30 minuti.</block>
+  <block id="44a62aa72367cca25b9e3f92da55ace0" category="list-text">Eseguire l'operazione discoverdevices dall'interfaccia utente SRM prima di procedere con altri flussi di lavoro SRA. Questa operazione garantisce che SRM sia a conoscenza delle modifiche apportate ai nomi delle SVM dopo uno switchover o uno switchback.</block>
 </blocks>
